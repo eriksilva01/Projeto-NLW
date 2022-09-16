@@ -1,0 +1,193 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul{
+    list-style: none;
+}
+
+body{
+    background-image: url(./bg.png);
+    background-position: top center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-color: #121214;
+}
+
+main{
+    max-width: 580px;
+    width: 90%;
+    margin: 32px auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    
+    
+}
+
+body * {
+    font-family: 'Inter', sans-serif;
+    
+}
+
+header {
+    padding-top: 4px;
+    text-align: center;
+    height: 120px;
+}
+
+header div {
+    width: 120px;
+    margin: auto;
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+
+    border-radius: 50%;
+
+    display: flex;
+    padding: 4px;
+
+}
+
+header div:hover {
+    transform: scale(1.1);
+    transition: .5s;
+}
+
+header img {
+    width: 100%;
+    border-radius: 50%;
+    
+
+}
+
+
+
+section { 
+    color: aliceblue;
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    padding-top: 4px;
+    border-radius: 10px;
+    
+}
+
+
+section div{
+    padding: 32px;
+    padding-top: 24px;
+    background-color: #2a2634;
+    border-radius: 8px;
+    /*border-top:  4px solid red;*/
+}
+
+section h2{
+    letter-spacing: -0.47px;
+     
+}
+
+section p {
+    color: #a1a1aa;
+    letter-spacing: -0.18px;
+
+}
+
+section ul {
+    display:flex;
+    flex-wrap: wrap;
+    gap: 16px;
+
+    margin-top: 24px;
+}
+
+section ul li:hover {
+    transform: scale(1.1);
+    transition: .3s;
+
+}
+
+.games-list img {
+    width: 90px;
+    border-radius: 8px;
+    border: 1px solid #443e54;
+
+}
+
+.channel-list img {
+    width: 90px;
+    border-radius: 8px;
+    border: 1px solid #443e54;
+    
+}
+
+/*animation*/
+header div {
+
+    animation: FromTop .7s .2s backwards;
+    /* esse .4s é o delay e a propriedade backwards
+    traz a animação do @keyframes abaixo*/
+
+}
+
+main section {
+    animation: FromBottom .7s backwards 
+}
+
+/*chamo na propriedade abaixo os sections por número pra 
+aplicar animações individuais em cada cartão*/
+main section:nth-child(1) {
+    animation-delay: .2s;
+
+}
+
+main section:nth-child(2) {
+    animation-delay: .4s;
+
+}
+
+main section:nth-child(3) {
+    animation-delay: .8s;
+
+}
+
+
+@keyframes  FromTop {
+        from { 
+            opacity: 0; /* não ver o elemento*/
+            transform: translateY(-30px);
+        }
+        to { 
+            opacity: 1; /* ver o elemento por completo*/
+            transform: translateY(0);
+        }
+    }
+
+@keyframes FromBottom {
+        from {
+            opacity: 0;
+            transform: translateY(30px) 
+            /* Joga os elementos partindo de baixo para cima*/
+        }
+    
+        to {
+            opacity: 1;
+            transform: translateY(0)
+        }
+    }
+
+body h1 {
+        text-align: center;
+        color: aliceblue;
+        padding:24px;
+    }
+
+header {
+    border-image: url(./logo.png);
+    background-repeat: none;
+
+
+}
+   
+
+  
